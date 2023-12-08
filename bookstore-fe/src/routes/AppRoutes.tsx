@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from '../pages/Home'
-import DefaultLayout from '../components/DefaultLayout'
+import DefaultLayout from '../components/layout/DefaultLayout'
 
 export default function AppRoutes() {
   return (

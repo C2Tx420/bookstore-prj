@@ -6,9 +6,9 @@ import './index.css'
 import { store } from './store/store.ts'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Provider store={store}>
       <AppRoutes />
     </Provider>
-  </React.StrictMode>,
+  // </React.StrictMode>,
 )
