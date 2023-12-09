@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
-import { loginAction } from '../store/auth/action'
 import { useAppDispatch } from '../hook/reduxHook'
+import { getBookListAction } from '../store/books/action'
 
 export default function Home() {
   const dispatch = useAppDispatch()
   useEffect(() => {
-    dispatch(loginAction({username:'aaa',password: 'aaa'}))
+    dispatch(getBookListAction())
   }, [])
   return (
     <div className="my-10">

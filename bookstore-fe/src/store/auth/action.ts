@@ -1,11 +1,12 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import { setloading } from '../loading/reducer'
-const loginAction = createAsyncThunk('auth/login', async (loginData: {username: string, password: string}, { dispatch }) => {
+import { supabase } from '../../config/supabase';
+const loginAction = createAsyncThunk('auth/login', async (loginData: {email: string, password: string}, { dispatch }) => {
     dispatch(setloading(true));
     try {
-        console.log(loginData);
-        throw new Error('a')
-        return 'aaa';
+        const {data} = await supabase.auth.signInWithPassword(loginData);
+        console.log(data);
+        return data;
     } catch (e: any) {
         throw new Error(e.message);
     } finally {
@@ -13,10 +14,23 @@ const loginAction = createAsyncThunk('auth/login', async (loginData: {username: 
     }
 })
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const registerAction = createAsyncThunk('auth/login', async (registerData: {email: string, password: string}, { dispatch }) => {
+    dispatch(setloading(true));
+    try {
+        const { data } = await supabase.auth.signUp(registerData);
+        console.log(data);
+        return;
+    } catch (e: any) {
+        throw new Error(e.message);
+    } finally {
+        dispatch(setloading(false));
+    }
+})
+
 const logoutAction = createAsyncThunk('auth/logout', async (_,{dispatch}) => {
     dispatch(setloading(true));
     try {
+        await supabase.auth.signOut();
         return null;
     } catch (e: any) {
         throw new Error(e.message);
@@ -25,4 +39,4 @@ const logoutAction = createAsyncThunk('auth/logout', async (_,{dispatch}) => {
     }
 })
 
-export { loginAction };
+export { loginAction, logoutAction, registerAction };
