@@ -5,7 +5,7 @@ import { useAppDispatch } from '../hook/reduxHook'
 export default function Home() {
   const dispatch = useAppDispatch()
   useEffect(() => {
-    dispatch(loginAction('aaa'))
+    dispatch(loginAction({username:'aaa',password: 'aaa'}))
   }, [])
   return (
     <div className="my-10">
