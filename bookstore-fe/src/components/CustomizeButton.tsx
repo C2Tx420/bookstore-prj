@@ -6,7 +6,7 @@ interface buttonProps {
     onClick?: any;
 }
 
-export default function Button({ type = 'default', text, onClick }: buttonProps) {
+export default function CustomizeButton({ type = 'default', text, onClick }: buttonProps) {
     const getClass = (type: string): string => {
         switch (type) {
             case 'bordered':

@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import { setloading } from "../loading/reducer";
 import { supabase } from "../../config/supabase";
 
-const getBookListAction = createAsyncThunk('book/getlist', async (_, { dispatch }) => {
+const getBookListAction = createAsyncThunk('book/getList', async (_, { dispatch }) => {
     dispatch(setloading(true));
     try {
         const { data }: any = await supabase
@@ -17,7 +17,7 @@ const getBookListAction = createAsyncThunk('book/getlist', async (_, { dispatch 
     }
 });
 
-const getBookDetailAction = createAsyncThunk('book/getlist', async (id, { dispatch }) => {
+const getBookDetailAction = createAsyncThunk('book/getDetail', async (id, { dispatch }) => {
     dispatch(setloading(true));
     try {
         const { data }: any = await supabase
@@ -32,7 +32,7 @@ const getBookDetailAction = createAsyncThunk('book/getlist', async (id, { dispat
     }
 });
 
-const addBookAction = createAsyncThunk('book/getlist', async (bookData, { dispatch }) => {
+const addBookAction = createAsyncThunk('book/addBook', async (bookData: any, { dispatch }) => {
     dispatch(setloading(true));
     try {
         const { data }: any = await supabase

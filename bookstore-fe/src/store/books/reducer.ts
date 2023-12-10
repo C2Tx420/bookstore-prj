@@ -11,7 +11,7 @@ const initialState: authState = {
     list: [],
 }
 
-export const authSlide = createSlice({
+export const bookSlide = createSlice({
     name: 'auth',
     initialState,
     reducers: {},
@@ -25,9 +25,12 @@ export const authSlide = createSlice({
         builder.addCase(addBookAction.fulfilled, (state, action) => {
             state.list = [...state.list, ...action.payload];
         });
+        builder.addCase(addBookAction.rejected, (_, action) => {
+            throw new Error(action.error.message);
+        });
     },
 })
 
-const authReducer = authSlide.reducer;
+const bookReducer = bookSlide.reducer;
 
-export default authReducer;
+export default bookReducer;

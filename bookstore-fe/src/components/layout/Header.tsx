@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import SearchBox from '../SearchBox'
-import Button from '../Button'
-import AuthModel from '../auth/AuthModal'
+import AuthModal from '../auth/AuthModal'
+import UploadModal from '../upload/UploadModal'
 
 export default function Header() {
   return (
@@ -12,8 +12,8 @@ export default function Header() {
           <Link to={'/'} className="font-bold text-2xl text-[#3D00B7] tracking-tighter">BOOK</Link>
           <div className="flex gap-5 items-center">
             <SearchBox />
-            <Button text='Upload' type='bordered' />
-            <AuthModel />
+            <UploadModal/>
+            <AuthModal />
           </div>
         </div>
       </div>

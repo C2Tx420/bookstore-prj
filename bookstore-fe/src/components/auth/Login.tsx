@@ -1,6 +1,6 @@
 import { Form, Input, message } from 'antd';
 import React, { useEffect } from 'react'
-import Button from '../Button';
+import CustomizeButton from '../CustomizeButton';
 import { useAppDispatch } from '../../hook/reduxHook';
 import { loginAction } from '../../store/auth/action';
 
@@ -11,6 +11,7 @@ export default function Login({ gotoRegister, closeModal }: any) {
   const handleSubmit = (loginForm: any) => {
     try{
       dispatch(loginAction(loginForm));
+      api.success('Login Success')
       closeModal();
     }catch(e: any) {
       api.error(e.message);
@@ -55,8 +56,8 @@ export default function Login({ gotoRegister, closeModal }: any) {
         </Form.Item>
       </Form>
       <div className="flex justify-center gap-3">
-        <Button text='Login' onClick={() => form.submit()} />
-        <Button text='Register' onClick={gotoRegister} />
+        <CustomizeButton text='Login' onClick={() => form.submit()} />
+        <CustomizeButton text='Register' onClick={gotoRegister} />
       </div>
     </>
   )
