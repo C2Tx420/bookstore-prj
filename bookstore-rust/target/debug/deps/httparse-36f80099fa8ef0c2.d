@@ -1,0 +1,12 @@
+/home/c2t/code/bookstore-prj/bookstore-rust/target/debug/deps/libhttparse-36f80099fa8ef0c2.rmeta: /home/c2t/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/src/lib.rs /home/c2t/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/src/iter.rs /home/c2t/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/src/macros.rs /home/c2t/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/src/simd/mod.rs /home/c2t/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/src/simd/sse42.rs /home/c2t/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/src/simd/avx2.rs
+
+/home/c2t/code/bookstore-prj/bookstore-rust/target/debug/deps/libhttparse-36f80099fa8ef0c2.rlib: /home/c2t/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/src/lib.rs /home/c2t/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/src/iter.rs /home/c2t/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/src/macros.rs /home/c2t/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/src/simd/mod.rs /home/c2t/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/src/simd/sse42.rs /home/c2t/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/src/simd/avx2.rs
+
+/home/c2t/code/bookstore-prj/bookstore-rust/target/debug/deps/httparse-36f80099fa8ef0c2.d: /home/c2t/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/src/lib.rs /home/c2t/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/src/iter.rs /home/c2t/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/src/macros.rs /home/c2t/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/src/simd/mod.rs /home/c2t/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/src/simd/sse42.rs /home/c2t/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/src/simd/avx2.rs
+
+/home/c2t/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/src/lib.rs:
+/home/c2t/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/src/iter.rs:
+/home/c2t/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/src/macros.rs:
+/home/c2t/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/src/simd/mod.rs:
+/home/c2t/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/src/simd/sse42.rs:
+/home/c2t/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/src/simd/avx2.rs:
