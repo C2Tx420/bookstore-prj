@@ -17,14 +17,14 @@ const getBookListAction = createAsyncThunk('book/getList', async (_, { dispatch 
     }
 });
 
-const getBookDetailAction = createAsyncThunk('book/getDetail', async (id, { dispatch }) => {
+const getBookDetailAction = createAsyncThunk('book/getDetail', async (id: string, { dispatch }) => {
     dispatch(setloading(true));
     try {
         const { data }: any = await supabase
             .from('books')
             .select('*')
             .eq('uuid', id)
-        return data;
+        return data[0];
     } catch (e: any) {
         throw new Error(e.message)
     } finally {
