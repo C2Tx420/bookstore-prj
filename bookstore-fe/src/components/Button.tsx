@@ -3,9 +3,10 @@ import React from 'react'
 interface buttonProps {
     type?: string;
     text: string
+    onClick?: any;
 }
 
-export default function Button({ type = 'default', text }: buttonProps) {
+export default function Button({ type = 'default', text, onClick }: buttonProps) {
     const getClass = (type: string): string => {
         switch (type) {
             case 'bordered':
@@ -17,7 +18,8 @@ export default function Button({ type = 'default', text }: buttonProps) {
         return ''
     }
     return (
-        <button className={`${getClass(type)} font-bold rounded-[60px] py-2 px-6 border-2 border-[#3D00B7] min-w-[130px]`}>
+        <button className={`${getClass(type)} font-bold rounded-[60px] py-2 px-6 border-2 border-[#3D00B7] min-w-[130px]`}
+                onClick={onClick}>
             {text}
         </button>
     )

@@ -2,27 +2,26 @@ import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import { loginAction, logoutAction, registerAction } from './action'
 
-export interface authState {
-    token: string | null
-}
-
-const initialState: authState = {
-    token: null,
-}
 
 export const authSlide = createSlice({
     name: 'auth',
-    initialState,
+    initialState: {},
     reducers: {},
     extraReducers: (builder) => {
+        builder.addCase(registerAction.rejected, (_, action: any)=>{
+            throw new Error(action.error.message)
+        })
         builder.addCase(registerAction.fulfilled, ()=>{
             return;
         })
+        builder.addCase(loginAction.rejected, (_, action: any)=>{
+            throw new Error(action.error.message)
+        })
         builder.addCase(loginAction.fulfilled, (state, action: PayloadAction<any>) => {
-            state.token = action.payload;
+            return state = action.payload;
         });
         builder.addCase(logoutAction.fulfilled, (state) => {
-            state.token = null;
+            return state = {};
         });
     },
 })
