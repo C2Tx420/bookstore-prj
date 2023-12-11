@@ -55,6 +55,7 @@ name = "bookstore-rust"
 version = "0.1.0"
 dependencies = [
  "postgrest",
+ "serde_json",
  "tokio",
 ]
 
