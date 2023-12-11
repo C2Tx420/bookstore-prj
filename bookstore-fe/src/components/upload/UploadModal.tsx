@@ -45,8 +45,8 @@ export default function UploadModal() {
     ]
     const handleOpen = () => {
         if (!user) {
-            // api.info('Please login before upload!');
-            setIsOpen(true);
+            api.info('Please login before upload!');
+            setIsOpen(false);
         } else {
             setIsOpen(true)
         }
@@ -56,13 +56,13 @@ export default function UploadModal() {
         const fileExt = fileList[0].name.split('.').pop();
         const fileName = `${Math.random()}.${fileExt}`;
         const newFilePath = `${fileName}`;
-        const imageUrl = `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/minted_image/${fileName}`
+        const imageUrl = `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/book_image/${fileName}`
         await supabase.storage.from('book_image').upload(newFilePath, file);
         const submitForm = { ...uploadForm, image: imageUrl };
         try {
             await dispatch(addBookAction(submitForm));
-            setIsOpen(false);
-            form.resetFields();
+            // setIsOpen(false);
+            // form.resetFields();
             api.success('Add Success!');
         } catch (e: any) {
             api.error(e.message)

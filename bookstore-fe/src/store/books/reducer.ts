@@ -23,7 +23,7 @@ export const bookSlide = createSlice({
             state.detail = action.payload;
         });
         builder.addCase(addBookAction.fulfilled, (state, action) => {
-            state.list = [...state.list, ...action.payload];
+            state.list = [...state.list, action.payload];
         });
         builder.addCase(addBookAction.rejected, (_, action) => {
             throw new Error(action.error.message);

@@ -35,10 +35,11 @@ const getBookDetailAction = createAsyncThunk('book/getDetail', async (id, { disp
 const addBookAction = createAsyncThunk('book/addBook', async (bookData: any, { dispatch }) => {
     dispatch(setloading(true));
     try {
-        const { data }: any = await supabase
+        await supabase
             .from('books')
             .insert(bookData)
-        return data;
+
+        return bookData;
     } catch (e: any) {
         throw new Error(e.message)
     } finally {
