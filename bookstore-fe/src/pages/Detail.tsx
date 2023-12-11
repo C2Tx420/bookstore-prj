@@ -16,11 +16,11 @@ export default function Detail() {
     },[])
     return (
         <div className='grid grid-cols-2 gap-5 py-5'>
-            <img src={bookData.image} alt="" className='h-[500px] object-cover object-center rounded-xl' />
+            <img src={bookData?.image} alt="" className='h-[500px] object-cover object-center rounded-xl' />
             <div>
-                <div className="font-bold text-2xl">{(bookData.title).toUpperCase()}</div>
-                <div className="font-medium text-sm opacity-75">{bookData.author}</div>
-                <div className="text-base opacity-70">{bookData.description}</div>
+                <div className="font-bold text-2xl">{(bookData?.title)?.toUpperCase()}</div>
+                <div className="font-medium text-sm opacity-75">{bookData?.author}</div>
+                <div className="text-base opacity-70">{bookData?.description}</div>
             </div>
         </div>
     )
