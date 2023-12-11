@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { useAppDispatch } from '../hook/reduxHook';
 import { getBookDetailAction } from '../store/books/action';

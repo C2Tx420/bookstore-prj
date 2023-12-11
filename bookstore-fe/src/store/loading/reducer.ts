@@ -8,7 +8,8 @@ export const loadingSlide = createSlice({
     initialState,
     reducers: {
         setloading: (state,action: PayloadAction<boolean>) => {
-            return state = action.payload;
+            state = action.payload;
+            return state;
         }
     },
 })

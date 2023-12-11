@@ -1,5 +1,4 @@
 import { Form, Input, message } from 'antd';
-import React from 'react'
 import Button from '../CustomizeButton';
 import { useAppDispatch } from '../../hook/reduxHook';
 import { registerAction } from '../../store/auth/action';

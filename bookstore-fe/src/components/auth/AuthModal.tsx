@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Modal } from 'antd'
 import CustomizeButton from '../CustomizeButton';
 import LoginModal from './Login';

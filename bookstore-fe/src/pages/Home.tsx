@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { useAppDispatch } from '../hook/reduxHook'
 import { getBookListAction } from '../store/books/action'
 import { bookModel } from '../types/book.model'

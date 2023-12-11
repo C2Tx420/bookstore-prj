@@ -18,10 +18,12 @@ export const authSlide = createSlice({
             throw new Error(action.error.message)
         })
         builder.addCase(loginAction.fulfilled, (state, action: PayloadAction<any>) => {
-            return state = action.payload;
+            state = action.payload;
+            return state;
         });
         builder.addCase(logoutAction.fulfilled, (state) => {
-            return state = {};
+            state = {};
+            return state
         });
     },
 })

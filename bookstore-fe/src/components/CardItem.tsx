@@ -1,4 +1,3 @@
-import React from 'react'
 import { bookModel } from '../types/book.model'
 import { useNavigate } from 'react-router-dom'
 
